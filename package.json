@@ -7,6 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "deploy": "npm run build && az storage blob upload-batch -s './dist' -d '$web' --account-name 'stgsandfrontendne024' --overwrite",
     "e2e": "ng e2e",
     "prepare": "husky",
     "lint:format": "npx --no-install lint-staged && npx --no-install pretty-quick --staged"
